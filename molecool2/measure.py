@@ -1,6 +1,8 @@
 """
 This module is for functions that perform measurements.
 """
+import numpy as np
+
 
 def calculate_distance(rA, rB):
     """Calculate the distance between two points.
@@ -26,6 +28,7 @@ def calculate_distance(rA, rB):
     distance = np.linalg.norm(distance_vector)
 
     return distance
+
 
 def calculate_angle(rA, rB, rC, degrees=False):
     # Calculate the angle between three points. Answer is given in radians by default, but can be given in degrees

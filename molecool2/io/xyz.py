@@ -2,6 +2,7 @@
 Functions for manipulating xyz files.
 """
 
+
 def open_xyz(file_location):
 
     # Open an xyz file and return symbols and coordinates.

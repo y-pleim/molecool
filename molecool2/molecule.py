@@ -1,6 +1,8 @@
 """
 Functions for molecule analysis.
 """
+from .measure import calculate_distance
+
 
 def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
     """
@@ -22,7 +24,7 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
     bonds: dict
         A dictionary containing bonded atoms with atom pairs as keys and the distance between the atoms as the value.
     """
-    
+
     # Find the bonds in a molecule (set of coordinates) based on distance criteria.
     bonds = {}
     num_atoms = len(coordinates)

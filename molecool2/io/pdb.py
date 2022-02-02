@@ -2,6 +2,9 @@
 Functions for manipulating pdb files.
 """
 
+import numpy as np
+
+
 def open_pdb(file_location):
     """Open a pdb file and retrieve atom symbols and coordinates.
 
@@ -37,4 +40,3 @@ def open_pdb(file_location):
     coords = np.array(coordinates)
 
     return symbols, coords
-

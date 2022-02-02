@@ -2,6 +2,13 @@
 Functions for visualization of molecules.
 """
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+# from mpl_tookits.mplot3d import Axes3D # noqa: F401
+from .atom_data import atom_colors
+
+
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
 
     # Draw a picture of a molecule using matplotlib.
@@ -46,6 +53,7 @@ def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi
         plt.savefig(save_location, dpi=dpi, graph_min=0, graph_max=2)
 
     return ax
+
 
 def bond_histogram(bond_list, save_location=None, dpi=300, graph_min=0, graph_max=2):
     # Draw a histogram of bond lengths based on a bond_list (output from build_bond_list function)
